@@ -15,24 +15,43 @@ may be at a higher risk of being targeted.
 
 
 ### Policies
-#### MS.DEFENDER.1.1v1
-The standard and strict preset security policies SHALL be enabled.
+## 1. Legacy Authentication
 
-<!--Policy: MS.DEFENDER.1.1v1; Criticality: SHALL -->
-- _Rationale:_ Defender includes a large number of features and settings to protect users against threats. Using the preset security policies, administrators can help ensure all new and existing users automatically have secure defaults applied.
+This section provides policies that reduce security risks related to legacy authentication protocols that do not support multifactor authentication (MFA).
+
+### Policies
+#### MS.AAD.1.1v1
+Legacy authentication SHALL be blocked.
+
+<!--Policy: MS.AAD.1.1v1; Criticality: SHALL -->
+- _Rationale:_ The security risk of allowing legacy authentication protocols is they do not support MFA. Blocking legacy protocols reduces the impact of user credential theft.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.1.2v1
-All users SHALL be added to Exchange Online Protection in either the standard or strict preset security policy.
+### Resources
 
-<!--Policy: MS.DEFENDER.1.2v1; Criticality: SHALL -->
-- _Rationale:_ Important user protections are provided by EOP, including anti-spam, anti-malware, and anti-phishing protections. By using the preset policies, administrators can help ensure all new and existing users have secure defaults applied automatically.
-- _Last modified:_ June 2023
-- _Note:_
-  - The standard and strict preset security policies must be enabled as directed
-    by [MS.DEFENDER.1.1v1](#msdefender11v1) for protections to be applied.
-  - Specific user accounts, except for sensitive accounts, MAY be exempt from the preset policies, provided they are added to one or more custom policies offering comparable protection. These users might need flexibility not offered by the preset policies. Their accounts should be added to a custom policy conforming, as closely as possible to the settings used by the preset policies. See the **Resources** section for more details on configuring policies.
+- [Common Conditional Access policy: Block legacy authentication](https://learn.microsoft.com/en-us/entra/identity/conditional-access/howto-conditional-access-policy-block-legacy)
 
+- [Five steps to securing your identity infrastructure](https://learn.microsoft.com/en-us/azure/security/fundamentals/steps-secure-identity)
+
+### License Requirements
+
+- N/A
+
+### Implementation
+
+#### MS.AAD.1.1v1 Instructions
+
+- [Determine if an agency’s existing applications use legacy authentication](https://learn.microsoft.com/en-us/entra/identity/conditional-access/block-legacy-authentication#identify-legacy-authentication-use) before blocking legacy authentication across the entire application base.
+
+- Create a [Conditional Access policy to block legacy authentication](https://learn.microsoft.com/en-us/entra/identity/conditional-access/howto-conditional-access-policy-block-legacy).
+
+## 2. Risk Based Policies
+
+This section provides policies that reduce security risks related to potentially compromised user accounts. These policies combine Azure AD Identity Protection and Azure AD Conditional Access. Azure AD Identity Protection uses numerous signals to detect the risk level for each user or sign-in and determine if an account may have been compromised.
+
+- _Additional mitigations to reduce risks associated with the authentication of workload identities:_ Although not covered in this baseline due to the need for an additional non-standard license, Microsoft provides support for mitigating risks related to workload identities (Azure AD applications or service principals). Agencies should strongly consider implementing this feature because workload identities present many of the same risks as interactive user access and are commonly used in modern systems. CISA urges organizations to [apply Conditional Access policies to workload identities](https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity).
+
+- _Note:_ In this section, the term ["high risk"](https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks) denotes the risk level applied by the Azure AD Identity Protection service to a user account or sign-in event.
 #### MS.DEFENDER.1.3v1
 All users SHALL be added to Defender for Office 365 protection in either the standard or strict preset security policy.
 
