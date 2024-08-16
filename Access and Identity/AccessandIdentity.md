@@ -289,12 +289,4 @@ before the instructions below can be completed.
 
 15. Review the policy and click **Submit** to complete the policy changes.
 
-## 5. Alerts
-
-There are several pre-built alert policies available pertaining to
-various apps in the M365 suite. These alerts give administrators better
-real-time insight into possible security incidents. Guidance on specific alerts to configure can be found in the linked section of the CISA M365 Security Configuration Baseline for Exchange Online.
-
-- [MS.EXO.16.1v1 \| CISA M365 Security Configuration Baseline for Exchange Online](./exo.md#msexo161v1)
-
 **`TLP:CLEAR`**
