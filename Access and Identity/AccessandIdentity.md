@@ -44,6 +44,8 @@ Legacy authentication SHALL be blocked.
 
 - Create a [Conditional Access policy to block legacy authentication](https://learn.microsoft.com/en-us/entra/identity/conditional-access/howto-conditional-access-policy-block-legacy).
 
+  
+
 
 ### Policies
 
