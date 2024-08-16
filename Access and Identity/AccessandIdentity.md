@@ -207,16 +207,16 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
   Access controls > Grant > Grant Access > <b>Require device to be marked as compliant</b> and <b>Require Microsoft Entra hybrid joined device</b> > For multiple controls > <b>Require one of the selected controls</b>
 </pre>
 
-## 4. Centralized Log Collection
 
-This section provides policies to reduce security risks related to the lack of security logs, which hampers security visibility.
 
 ### Policies
 ## 3. Are allowed MFA Methods considered to be "Phishing-resisant"?
 
 
+
 ### Policies
 ## 4. Is there an Active Password Policy?
+
 
 
 ### Policies
@@ -311,8 +311,10 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 4. Click **Save**.
 
+
 ### Policies
 ## 6. Number of Unused Licenses
+
 
 
 
