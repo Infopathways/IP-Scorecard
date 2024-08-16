@@ -52,7 +52,7 @@ A custom policy SHALL be configured to protect PII and sensitive information, as
                unauthorized disclosures.
 - _Last modified:_ June 2023
 
-#### Scope
+#### Part 1
 The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams chat, and Devices.
 
 - _Rationale:_ Unauthorized disclosures may happen through M365 services
@@ -61,7 +61,8 @@ The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams cha
 - _Last modified:_ June 2023
 - _Note:_ The custom policy referenced here is the same policy
           configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
-#### MS.DEFENDER.4.3v1
+  
+#### Part 2
 The action for the custom policy SHOULD be set to block sharing sensitive information with everyone.
 
 <!--Criticality: SHOULD -->
@@ -72,7 +73,7 @@ The action for the custom policy SHOULD be set to block sharing sensitive inform
 - _Note:_ The custom policy referenced here is the same policy
           configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
 
-#### MS.DEFENDER.4.4v1
+#### Part 3
 Notifications to inform users and help educate them on the proper use of sensitive information SHOULD be enabled in the custom policy.
 
 <!--Criticality: SHOULD -->
@@ -84,7 +85,7 @@ Notifications to inform users and help educate them on the proper use of sensiti
 - _Note:_ The custom policy referenced here is the same policy
           configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
 
-#### MS.DEFENDER.4.5v1
+#### Part 4
 A list of apps that are restricted from accessing files protected by DLP policy SHOULD be defined.
 
 <!--Criticality: SHOULD -->
@@ -95,7 +96,7 @@ A list of apps that are restricted from accessing files protected by DLP policy 
                to sensitive information on endpoints using Defender.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.4.6v1
+#### Part 5
 The custom policy SHOULD include an action to block access to sensitive
 information by restricted apps and unwanted Bluetooth applications.
 
@@ -145,7 +146,7 @@ information by restricted apps and unwanted Bluetooth applications.
 
 ### Implementation
 
-#### MS.DEFENDER.4.1v1 Instructions
+#### Part 1 Instructions
 
 1. Sign in to the **Microsoft Purview compliance portal**.
 
@@ -206,24 +207,24 @@ information by restricted apps and unwanted Bluetooth applications.
 
 22. Click **Submit**.
 
-#### MS.DEFENDER.4.2v1 Instructions
+#### Part 2 Instructions
 
 See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) step 8
    for details on enforcing DLP policy in specific M365 service locations.
 
-#### MS.DEFENDER.4.3v1 Instructions
+#### Part 3 Instructions
 
 See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) steps
    15-17 for details on configuring DLP policy to block sharing sensitive
    information with everyone.
 
-#### MS.DEFENDER.4.4v1 Instructions
+#### Part 4 Instructions
 
 See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) steps
    18-19 for details on configuring DLP policy to notify users when accessing
    sensitive information.
 
-#### MS.DEFENDER.4.5v1 Instructions
+#### Part 5 Instructions
 
 1. Sign in to the **Microsoft Purview compliance portal**.
 
@@ -245,7 +246,7 @@ See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) steps
 9. Enter an app and executable name to disallow said app from
    accessing protected files, and log the incident.
 
-#### MS.DEFENDER.4.6v1 Instructions
+#### Instructions
 
 If restricted app and unwanted Bluetooth app restrictions are desired,
 associated devices must be onboarded with Defender for Endpoint
