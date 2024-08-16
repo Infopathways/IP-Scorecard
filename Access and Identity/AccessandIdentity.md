@@ -46,7 +46,7 @@ Legacy authentication SHALL be blocked.
 
 
 ### Policies
-### 3. Phishing-resistant MFA SHALL be enforced for all users.
+## 3. Are allowed MFA methods considered to be "Phishing-resistant"
 
 The phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.
 
