@@ -316,7 +316,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 
 ### Policies
-#### 7. A custom policy SHALL be configured to protect PII and sensitive information, as defined by the agency. 
+## 7. A custom policy SHALL be configured to protect PII and sensitive information, as defined by the agency. 
 
 At a minimum, credit card numbers, U.S. Individual Taxpayer Identification Numbers (ITIN), and U.S. Social Security numbers (SSN) SHALL be blocked.
 
