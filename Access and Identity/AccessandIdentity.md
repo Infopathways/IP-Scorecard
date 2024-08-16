@@ -46,7 +46,6 @@ Legacy authentication SHALL be blocked.
 
   
 
-
 ### Policies
 
 ## 3. Are allowed MFA methods considered to be "Phishing-resistant"
@@ -209,11 +208,6 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 
   Access controls > Grant > Grant Access > <b>Require device to be marked as compliant</b> and <b>Require Microsoft Entra hybrid joined device</b> > For multiple controls > <b>Require one of the selected controls</b>
 </pre>
-
-
-
-### Policies
-## 3. Are allowed MFA Methods considered to be "Phishing-resisant"?
 
 
 
