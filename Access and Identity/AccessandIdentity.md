@@ -14,7 +14,7 @@ may be at a higher risk of being targeted.
 ### Policies
 ## 1. MFA Deployment
 
-## Policies
+## Policy
 MFA MUST be deployed for all user accounts
 
 ### Rationale
@@ -30,7 +30,7 @@ Deploying multifactor authentication (MFA) for Microsoft 365 is essential for en
 
 This section provides policies that reduce security risks related to legacy authentication protocols that do not support multifactor authentication (MFA).
 
-### Policies
+### Policy
 Legacy authentication SHALL be blocked.
 
 - _Rationale:_ The security risk of allowing legacy authentication protocols is they do not support MFA. Blocking legacy protocols reduces the impact of user credential theft.
@@ -55,7 +55,7 @@ Legacy authentication SHALL be blocked.
 
 
 ## 3. Are allowed MFA methods considered to be "Phishing-resistant"
-### Policies
+### Policy
 The phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.
 
 Policy: Implementation #1 
