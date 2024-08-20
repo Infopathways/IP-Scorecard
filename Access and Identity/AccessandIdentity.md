@@ -26,7 +26,6 @@ Deploying multifactor authentication (MFA) for Microsoft 365 is essential for en
 - [Enable Azure MFA](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-azure-mfa)
 
 
-### Policies
 ## 2. Are Legacy Authentication methods blocked?
 
 This section provides policies that reduce security risks related to legacy authentication protocols that do not support multifactor authentication (MFA).
@@ -54,7 +53,6 @@ Legacy authentication SHALL be blocked.
 
   
 
-### Policies
 
 ## 3. Are allowed MFA methods considered to be "Phishing-resistant"
 
@@ -200,12 +198,10 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 
 
 
-### Policies
 ## 4. Is there an Active Password Policy?
 
 
 
-### Policies
 ## 5. Can only administrators register and consent to applications?
 
 This section provides policies that help reduce security risk of malicious applications or service principals added to the tenant by non-privileged users. Malicious applications can perform many of the same operations as interactive users and can access data on behalf of compromised users. These policies apply to custom-developed applications and applications published by third-party vendors.
@@ -298,13 +294,11 @@ Group owners SHALL NOT be allowed to consent to applications.
 4. Click **Save**.
 
 
-### Policies
 ## 6. Number of Unused Licenses
 
 
 
 
-### Policies
 ## 7. A custom policy SHALL be configured to protect PII and sensitive information, as defined by the agency. 
 
 At a minimum, credit card numbers, U.S. Individual Taxpayer Identification Numbers (ITIN), and U.S. Social Security numbers (SSN) SHALL be blocked.
