@@ -14,7 +14,7 @@ may be at a higher risk of being targeted.
 ### Policies
 ## 1. MFA Deployment
 
-## Policy
+### Policy
 MFA MUST be deployed for all user accounts
 
 ### Rationale
@@ -206,32 +206,24 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 
 This section provides policies that help reduce security risk of malicious applications or service principals added to the tenant by non-privileged users. Malicious applications can perform many of the same operations as interactive users and can access data on behalf of compromised users. These policies apply to custom-developed applications and applications published by third-party vendors.
 
-### Policies
-#### MS.AAD.5.1v1
+### Policy
+#### Implementation #1
 Only administrators SHALL be allowed to register applications.
-
-<!--Policy: MS.AAD.5.1v1; Criticality: SHALL -->
 - _Rationale:_ Application access for the tenant presents a heightened security risk compared to interactive user access because applications are typically not subject to critical security protections, such as MFA policies. Reduce risk of unauthorized users installing malicious applications into the tenant by ensuring that only specific privileged users can register applications.
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.2v1
+#### Implementation #2
 Only administrators SHALL be allowed to consent to applications.
-
-<!--Policy: MS.AAD.5.2v1; Criticality: SHALL -->
 - _Rationale:_ Limiting applications consent to only specific privileged users reduces risk of users giving insecure applications access to their data via [consent grant attacks](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/detect-and-remediate-illicit-consent-grants?view=o365-worldwide).
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.3v1
+#### Implementation #3
 An admin consent workflow SHALL be configured for applications.
-
-<!--Policy: MS.AAD.5.3v1; Criticality: SHALL -->
 - _Rationale:_ Configuring an admin consent workflow reduces the risk of the previous policy by setting up a process for users to securely request access to applications necessary for business purposes. Administrators have the opportunity to review the permissions requested by new applications and approve or deny access based on a risk assessment.
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.4v1
+#### Implementation #4
 Group owners SHALL NOT be allowed to consent to applications.
-
-<!--Policy: MS.AAD.5.4v1; Criticality: SHALL -->
 - _Rationale:_ In M365, group owners and team owners can consent to applications accessing data in the tenant. By requiring consent requests to go through an approval workflow, risk of exposure to malicious applications is reduced.
 - _Last modified:_ June 2023
 
@@ -249,7 +241,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 ### Implementation
 
-#### MS.AAD.5.1v1 Instructions
+#### Implementation #1 Instructions
 
 1.  In **Azure Active Directory**, under **Manage**, select **Users**.
 
@@ -259,7 +251,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 4. Click **Save**.
 
-#### MS.AAD.5.2v1 Instructions
+#### Implementation #2 Instructions
 
 1.  In **Azure Active Directory** under **Manage**, select **Enterprise Applications.**
 
@@ -269,7 +261,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 4. Click **Save**.
 
-#### MS.AAD.5.3v1 Instructions
+#### Implementation #3 Instructions
 
 1.  In **Azure Active Directory** create a new Azure AD Group that contains admin users responsible for reviewing and adjudicating application consent requests. Group members will be notified when users request consent for new applications.
 
@@ -283,7 +275,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 6. Click **Save**.
 
-#### MS.AAD.5.4v1 Instructions
+#### Implementation #4 Instructions
 
 1.  In **Azure Active Directory** under **Applications**, select **Enterprise Applications.**
 
@@ -466,18 +458,18 @@ information by restricted apps and unwanted Bluetooth applications.
 
 #### Part 2 Instructions
 
-See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) step 8
+See [Implementation #1 Instructions](#msdefender41v1-instructions) step 8
    for details on enforcing DLP policy in specific M365 service locations.
 
 #### Part 3 Instructions
 
-See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) steps
+See [Implementation #1 Instructions](#msdefender41v1-instructions) steps
    15-17 for details on configuring DLP policy to block sharing sensitive
    information with everyone.
 
 #### Part 4 Instructions
 
-See [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) steps
+See [Implementation #1 Instructions](#msdefender41v1-instructions) steps
    18-19 for details on configuring DLP policy to notify users when accessing
    sensitive information.
 
@@ -516,7 +508,7 @@ before the instructions below can be completed.
 3. Select **Policies** from the top of the page.
 
 4. Find the custom DLP policy configured under
-   [MS.DEFENDER.4.1v1 Instructions](#msdefender41v1-instructions) in the list
+   [Implementation #1 Instructions](#msdefender41v1-instructions) in the list
    and click the Policy name to select.
 
 5. Select **Edit Policy**.
