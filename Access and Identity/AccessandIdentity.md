@@ -111,7 +111,7 @@ Managed Devices SHOULD be required to register MFA.
 
 ### Implementation
 
-#### Implementation #1 Instructions
+### Implementation #1 Instructions
 
 1. Create a conditional access policy enforcing phishing-resistant MFA for all users. Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -123,7 +123,7 @@ Managed Devices SHOULD be required to register MFA.
   Access controls > Grant > Grant Access > Require authentication strength > <b>Phishing-resistant MFA</b>
 </pre>
 
-#### Implementation #2 Instructions
+### Implementation #2 Instructions
 
 1. If phishing-resistant MFA has not been enforced for all users yet, create a conditional access policy that enforces MFA but does not dictate MFA method. Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -135,7 +135,7 @@ Managed Devices SHOULD be required to register MFA.
   Access controls > Grant > Grant Access > <b>Require multifactor authentication</b>
 </pre>
 
-#### Implementation #3 Instructions
+### Implementation #3 Instructions
 If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator is in use, configure Authenticator to display context information to users when they log in.
 
 1. In **Azure Active Directory**, click **Security > Authentication methods > Microsoft Authenticator**.
@@ -146,15 +146,15 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 6. Select **Save**
 
 
-#### Implementation #4 Instructions
+### Implementation #4 Instructions
 1. Go through the process of [migrating from the legacy Azure AD MFA and Self-Service Password Reset (SSPR) administration pages to the new unified Authentication Methods policy page](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-authentication-methods-manage).
 2. Once ready to finish the migration, [set the **Manage Migration** option to **Migration Complete**](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-authentication-methods-manage#finish-the-migration).
 
-#### Implementation #5 Instructions
+### Implementation #5 Instructions
 1. In **Azure Active Directory**, click **Security > Authentication methods**
 2. Click on the **SMS**, **Voice Call**, and **Email OTP** authentication methods and disable each of them. Their statuses should be **Enabled > No** on the **Authentication methods > Policies** page.
 
-#### Implementation #6 Instructions
+### Implementation #6 Instructions
 
 1. Create a conditional access policy enforcing phishing-resistant MFA for highly privileged roles.  Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -213,22 +213,22 @@ An Active Password Policy MUST be configured for Microsoft 365.
 This section provides policies that help reduce security risk of malicious applications or service principals added to the tenant by non-privileged users. Malicious applications can perform many of the same operations as interactive users and can access data on behalf of compromised users. These policies apply to custom-developed applications and applications published by third-party vendors.
 
 ### Policy
-#### Implementation #1
+### Implementation #1
 Only administrators SHALL be allowed to register applications.
 - _Rationale:_ Application access for the tenant presents a heightened security risk compared to interactive user access because applications are typically not subject to critical security protections, such as MFA policies. Reduce risk of unauthorized users installing malicious applications into the tenant by ensuring that only specific privileged users can register applications.
 - _Last modified:_ June 2023
 
-#### Implementation #2
+### Implementation #2
 Only administrators SHALL be allowed to consent to applications.
 - _Rationale:_ Limiting applications consent to only specific privileged users reduces risk of users giving insecure applications access to their data via [consent grant attacks](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/detect-and-remediate-illicit-consent-grants?view=o365-worldwide).
 - _Last modified:_ June 2023
 
-#### Implementation #3
+### Implementation #3
 An admin consent workflow SHALL be configured for applications.
 - _Rationale:_ Configuring an admin consent workflow reduces the risk of the previous policy by setting up a process for users to securely request access to applications necessary for business purposes. Administrators have the opportunity to review the permissions requested by new applications and approve or deny access based on a risk assessment.
 - _Last modified:_ June 2023
 
-#### Implementation #4
+### Implementation #4
 Group owners SHALL NOT be allowed to consent to applications.
 - _Rationale:_ In M365, group owners and team owners can consent to applications accessing data in the tenant. By requiring consent requests to go through an approval workflow, risk of exposure to malicious applications is reduced.
 - _Last modified:_ June 2023
@@ -317,7 +317,7 @@ At a minimum, credit card numbers, U.S. Individual Taxpayer Identification Numbe
                provide a way for agencies to detect and prevent
                unauthorized disclosures.
 
-#### Part 1
+### Part 1
 The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams chat, and Devices.
 
 - _Rationale:_ Unauthorized disclosures may happen through M365 services
@@ -325,7 +325,7 @@ The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams cha
                affected locations to be effective.
 <br>
   
-#### Part 2
+### Part 2
 The action for the custom policy SHOULD be set to block sharing sensitive information with everyone.
 
 <!--Criticality: SHOULD -->
@@ -334,7 +334,7 @@ The action for the custom policy SHOULD be set to block sharing sensitive inform
                on agency policies and valid business justifications.
 
 <br>
-#### Part 3
+### Part 3
 Notifications to inform users and help educate them on the proper use of sensitive information SHOULD be enabled in the custom policy.
 
 <!--Criticality: SHOULD -->
@@ -344,7 +344,7 @@ Notifications to inform users and help educate them on the proper use of sensiti
                accessing sensitive information.
 
 <br>
-#### Part 4
+### Part 4
 A list of apps that are restricted from accessing files protected by DLP policy SHOULD be defined.
 
 <!--Criticality: SHOULD -->
@@ -354,7 +354,7 @@ A list of apps that are restricted from accessing files protected by DLP policy 
                possible to use DLP policies to restrict those apps' access
                to sensitive information on endpoints using Defender.
 <br>
-#### Part 5
+### Part 5
 The custom policy SHOULD include an action to block access to sensitive
 information by restricted apps and unwanted Bluetooth applications.
 
