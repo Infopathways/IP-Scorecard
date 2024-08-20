@@ -61,7 +61,6 @@ The phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)
 Policy: Implementation #1 
 If on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).
 - _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.
-- _Last modified:_ June 2023
 
 Policy: Implementation #2 
 If phishing-resistant MFA has not been enforced, an alternative MFA method SHALL be enforced for all users.
@@ -71,12 +70,10 @@ If phishing-resistant MFA has not been enforced, an alternative MFA method SHALL
 Policy: Implementation #3
 If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information.
 - _Rationale:_ This stopgap security policy helps protect the tenant when phishing-resistant MFA has not been enforced and Microsoft Authenticator is used. This policy helps improve the security of Microsoft Authenticator by showing user context information, which helps reduce MFA phishing compromises.
-- _Last modified:_ June 2023
 
 Policy: Implementation #4
 The Authentication Methods Manage Migration feature SHALL be set to Migration Complete.
 - _Rationale:_ To disable the legacy authentication methods screen for the tenant, configure the Manage Migration feature to Migration Complete. The MFA and Self-Service Password Reset (SSPR) authentication methods are both managed from a central admin page, thereby reducing administrative complexity and potential security misconfigurations.
-- _Last modified:_ June 2023
 
 Policy: Implementation #5
 The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.
@@ -86,7 +83,6 @@ The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SH
 Policy: Implementation #6
 Phishing-resistant MFA SHALL be required for highly privileged roles.
 - _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.
-- _Last modified:_ June 2023
 - _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.
 
 Policy: Implementation #7
@@ -199,8 +195,21 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 
 
 ## 4. Is there an Active Password Policy?
+### Policy
+An Active Password Policy MUST be configured for Microsoft 365. 
 
+### Rationale
+Implementing a robust password policy in Microsoft 365 is vital for maintaining security by ensuring that passwords are strong and diverse, which helps protect against common attacks and limits the damage of successful breaches.
 
+### Implementation
+1. Log into the [Microsoft Entra Admin Center Password Policy Settings]([url](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/AuthenticationMethodsMenuBlade/~/PasswordProtection/fromNav/Identity))
+2. Fill the following information
+   - Lockout threshold: 10
+   - Lockout duration in seconds: 60
+   - Enforce Custom List: Yes
+   - Custom Banned Password List:  Copy the passwords from:  [SecLists/Passwords/Common-Credentials/10-million-password-list-top-1000.txt at master]([url](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt))
+   - Enable Password protection on Windows Server Active Directory: Yes
+   - Mode: Enforced
 
 ## 5. Can only administrators register and consent to applications?
 
