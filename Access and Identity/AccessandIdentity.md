@@ -323,7 +323,7 @@ The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams cha
 - _Rationale:_ Unauthorized disclosures may happen through M365 services
                or endpoint devices. DLP policies should cover all
                affected locations to be effective.
-
+<br>
   
 #### Part 2
 The action for the custom policy SHOULD be set to block sharing sensitive information with everyone.
@@ -333,7 +333,7 @@ The action for the custom policy SHOULD be set to block sharing sensitive inform
                explicitly allowed. Specific exemptions can be made based
                on agency policies and valid business justifications.
 
-
+<br>
 #### Part 3
 Notifications to inform users and help educate them on the proper use of sensitive information SHOULD be enabled in the custom policy.
 
@@ -343,7 +343,7 @@ Notifications to inform users and help educate them on the proper use of sensiti
                notifications provides positive feedback to users when
                accessing sensitive information.
 
-
+<br>
 #### Part 4
 A list of apps that are restricted from accessing files protected by DLP policy SHOULD be defined.
 
@@ -353,7 +353,7 @@ A list of apps that are restricted from accessing files protected by DLP policy 
                information. Defining a list of those apps makes it
                possible to use DLP policies to restrict those apps' access
                to sensitive information on endpoints using Defender.
-
+<br>
 #### Part 5
 The custom policy SHOULD include an action to block access to sensitive
 information by restricted apps and unwanted Bluetooth applications.
