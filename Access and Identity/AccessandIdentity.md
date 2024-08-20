@@ -17,7 +17,7 @@ may be at a higher risk of being targeted.
 ## Policies
 MFA MUST be deployed for all user accounts
 
-## Rationale
+### Rationale
 Deploying multifactor authentication (MFA) for Microsoft 365 is essential for enhancing security by adding an extra layer of protection, making it significantly harder for unauthorized users to gain access even if passwords are compromised. It helps protect against credential theft, reduces the risk of data breaches, and ensures compliance with industry regulations. Additionally, Microsoft 365 offers flexible and user-friendly options for implementing MFA, such as Conditional Access policies and security defaults, making it adaptable to various organizational needs.
 
 ### Implementation
@@ -55,7 +55,7 @@ Legacy authentication SHALL be blocked.
 
 
 ## 3. Are allowed MFA methods considered to be "Phishing-resistant"
-
+### Policies
 The phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.
 
 Policy: Implementation #1 
