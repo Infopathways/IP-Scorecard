@@ -16,9 +16,7 @@ may be at a higher risk of being targeted.
 
 ### Policy
 MFA MUST be deployed for all user accounts
-
-### Rationale
-Deploying multifactor authentication (MFA) for Microsoft 365 is essential for enhancing security by adding an extra layer of protection, making it significantly harder for unauthorized users to gain access even if passwords are compromised. It helps protect against credential theft, reduces the risk of data breaches, and ensures compliance with industry regulations. Additionally, Microsoft 365 offers flexible and user-friendly options for implementing MFA, such as Conditional Access policies and security defaults, making it adaptable to various organizational needs.
+- _Rationale:_ Deploying multifactor authentication (MFA) for Microsoft 365 is essential for enhancing security by adding an extra layer of protection, making it significantly harder for unauthorized users to gain access even if passwords are compromised. It helps protect against credential theft, reduces the risk of data breaches, and ensures compliance with industry regulations. Additionally, Microsoft 365 offers flexible and user-friendly options for implementing MFA, such as Conditional Access policies and security defaults, making it adaptable to various organizational needs.
 
 ### Implementation
 
@@ -198,8 +196,7 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 ### Policy
 An Active Password Policy MUST be configured for Microsoft 365. 
 
-### Rationale
-Implementing a robust password policy in Microsoft 365 is vital for maintaining security by ensuring that passwords are strong and diverse, which helps protect against common attacks and limits the damage of successful breaches.
+- _Rationale:_ Implementing a robust password policy in Microsoft 365 is vital for maintaining security by ensuring that passwords are strong and diverse, which helps protect against common attacks and limits the damage of successful breaches.
 
 ### Implementation
 1. Log into the [Microsoft Entra Admin Center Password Policy Settings]([url](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/AuthenticationMethodsMenuBlade/~/PasswordProtection/fromNav/Identity))
@@ -297,18 +294,28 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 ## 6. Number of Unused Licenses
 
+### Policy
+Licenses that are not assigned to any user SHALL be removed from the environment. 
 
+- _Rationale:_ Removing unassigned licenses in Microsoft 365 is important for cost management and ensuring efficient use of resources. By regularly reviewing and removing unassigned licenses, organizations can avoid unnecessary expenses and free up licenses for new users
+
+### Implementation
+
+### Instructions
+1. Login to the [Microsoft Admin Center ](admin.microsoft.com) as an administrator
+2. On the navigation bar, select Billing dropdown and select Licenses
+3. Identify unassigned licenses and remove them, ensuring the organization only pays for the active licenses 
 
 
 ## 7. A custom policy SHALL be configured to protect PII and sensitive information, as defined by the agency. 
 
+### Policy
 At a minimum, credit card numbers, U.S. Individual Taxpayer Identification Numbers (ITIN), and U.S. Social Security numbers (SSN) SHALL be blocked.
 
 - _Rationale:_ Users may inadvertently share sensitive information with
                others who should not have access to it. DLP policies
                provide a way for agencies to detect and prevent
                unauthorized disclosures.
-- _Last modified:_ June 2023
 
 #### Part 1
 The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams chat, and Devices.
@@ -316,8 +323,7 @@ The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams cha
 - _Rationale:_ Unauthorized disclosures may happen through M365 services
                or endpoint devices. DLP policies should cover all
                affected locations to be effective.
-- _Last modified:_ June 2023
-- _Note:_ The custom policy referenced here is the same policy
+=- _Note:_ The custom policy referenced here is the same policy
           configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
   
 #### Part 2
@@ -339,7 +345,6 @@ Notifications to inform users and help educate them on the proper use of sensiti
                proper use of sensitive information. Enabling
                notifications provides positive feedback to users when
                accessing sensitive information.
-- _Last modified:_ June 2023
 - _Note:_ The custom policy referenced here is the same policy
           configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
 
@@ -352,7 +357,6 @@ A list of apps that are restricted from accessing files protected by DLP policy 
                information. Defining a list of those apps makes it
                possible to use DLP policies to restrict those apps' access
                to sensitive information on endpoints using Defender.
-- _Last modified:_ June 2023
 
 #### Part 5
 The custom policy SHOULD include an action to block access to sensitive
@@ -365,7 +369,6 @@ information by restricted apps and unwanted Bluetooth applications.
                access from restricted apps and unwanted Bluetooth
                applications prevents unauthorized disclosure by those
                programs.
-- _Last modified:_ June 2023
 - _Note:_
   - The custom policy referenced here is the same policy
     configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
