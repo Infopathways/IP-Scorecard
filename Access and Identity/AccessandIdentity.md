@@ -323,8 +323,7 @@ The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams cha
 - _Rationale:_ Unauthorized disclosures may happen through M365 services
                or endpoint devices. DLP policies should cover all
                affected locations to be effective.
-=- _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+
   
 #### Part 2
 The action for the custom policy SHOULD be set to block sharing sensitive information with everyone.
@@ -333,9 +332,7 @@ The action for the custom policy SHOULD be set to block sharing sensitive inform
 - _Rationale:_ Access to sensitive information should be prohibited unless
                explicitly allowed. Specific exemptions can be made based
                on agency policies and valid business justifications.
-- _Last modified:_ June 2023
-- _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+
 
 #### Part 3
 Notifications to inform users and help educate them on the proper use of sensitive information SHOULD be enabled in the custom policy.
@@ -345,8 +342,7 @@ Notifications to inform users and help educate them on the proper use of sensiti
                proper use of sensitive information. Enabling
                notifications provides positive feedback to users when
                accessing sensitive information.
-- _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+
 
 #### Part 4
 A list of apps that are restricted from accessing files protected by DLP policy SHOULD be defined.
@@ -370,8 +366,6 @@ information by restricted apps and unwanted Bluetooth applications.
                applications prevents unauthorized disclosure by those
                programs.
 - _Note:_
-  - The custom policy referenced here is the same policy
-    configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
   - This action can only be included if at least one device is onboarded
     to the agency tenant. Otherwise, the option to block restricted apps will
     not be available.
@@ -470,18 +464,18 @@ information by restricted apps and unwanted Bluetooth applications.
 
 #### Part 2 Instructions
 
-See [Implementation #1 Instructions](#msdefender41v1-instructions) step 8
+See Implementation #1 Instructions step 8
    for details on enforcing DLP policy in specific M365 service locations.
 
 #### Part 3 Instructions
 
-See [Implementation #1 Instructions](#msdefender41v1-instructions) steps
+See Implementation #1 Instructions steps
    15-17 for details on configuring DLP policy to block sharing sensitive
    information with everyone.
 
 #### Part 4 Instructions
 
-See [Implementation #1 Instructions](#msdefender41v1-instructions) steps
+See Implementation #1 Instructions steps
    18-19 for details on configuring DLP policy to notify users when accessing
    sensitive information.
 
@@ -520,7 +514,7 @@ before the instructions below can be completed.
 3. Select **Policies** from the top of the page.
 
 4. Find the custom DLP policy configured under
-   [Implementation #1 Instructions](#msdefender41v1-instructions) in the list
+   Implementation #1 Instructions] in the list
    and click the Policy name to select.
 
 5. Select **Edit Policy**.
