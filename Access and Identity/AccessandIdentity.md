@@ -60,48 +60,42 @@ Legacy authentication SHALL be blocked.
 
 The phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.
 
+Policy: Implementation #1 
 If on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).
-
-<!--Policy: Implementation #1 -->
 - _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.
 - _Last modified:_ June 2023
 
-<!--Policy: Implementation #2 -->
+Policy: Implementation #2 
 If phishing-resistant MFA has not been enforced, an alternative MFA method SHALL be enforced for all users.
-
-<!--Policy: Implementation #3 -->
 - _Rationale:_ This is a stopgap security policy to help protect the tenant if phishing-resistant MFA has not been enforced. This policy requires MFA enforcement, thus reducing single-form authentication risk.
 - _Note:_ If a conditional access policy has been created enforcing phishing-resistant MFA, then this policy is not necessary. This policy does not dictate the specific MFA method.
 
-<!--Policy: Implementation #4 -->
+Policy: Implementation #3
 If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information.
-
-<!--Policy: Implementation #5 -->
 - _Rationale:_ This stopgap security policy helps protect the tenant when phishing-resistant MFA has not been enforced and Microsoft Authenticator is used. This policy helps improve the security of Microsoft Authenticator by showing user context information, which helps reduce MFA phishing compromises.
 - _Last modified:_ June 2023
 
-<!--Policy: Implementation #6 -->
+Policy: Implementation #4
 The Authentication Methods Manage Migration feature SHALL be set to Migration Complete.
-
 - _Rationale:_ To disable the legacy authentication methods screen for the tenant, configure the Manage Migration feature to Migration Complete. The MFA and Self-Service Password Reset (SSPR) authentication methods are both managed from a central admin page, thereby reducing administrative complexity and potential security misconfigurations.
 - _Last modified:_ June 2023
 
-<!--Policy: Implementation #7 -->
+Policy: Implementation #5
 The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.
 - _Rationale:_ SMS, voice call, and email OTP are the weakest authenticators. This policy forces users to use stronger MFA methods.
 - _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.
 
-<!--Policy: Implementation #8 -->
+Policy: Implementation #6
 Phishing-resistant MFA SHALL be required for highly privileged roles.
 - _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.
 - _Last modified:_ June 2023
 - _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.
 
-<!--Policy: Implementation #9 -->
+Policy: Implementation #7
 Managed devices SHOULD be required for authentication.
 - _Rationale:_ The security risk of an adversary authenticating to the tenant from their own device is reduced by requiring a managed device to authenticate. Managed devices are under the provisioning and control of the agency. [OMB-22-09](https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf) states, "When authorizing users to access resources, agencies must consider at least one device-level signal alongside identity information about the authenticated user."
 
-<!--Policy: Implementation #10 -->
+Policy: Implementation #8
 Managed Devices SHOULD be required to register MFA.
 - _Rationale:_ Reduce risk of an adversary using stolen user credentials and then registering their own MFA device to access the tenant by requiring a managed device provisioned and controlled by the agency to perform registration actions. This prevents the adversary from using their own unmanaged device to perform the registration.
 
