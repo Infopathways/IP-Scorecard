@@ -14,6 +14,17 @@ may be at a higher risk of being targeted.
 ### Policies
 ## 1. MFA Deployment
 
+## Policies
+MFA MUST be deployed for all user accounts
+
+## Rationale
+Deploying multifactor authentication (MFA) for Microsoft 365 is essential for enhancing security by adding an extra layer of protection, making it significantly harder for unauthorized users to gain access even if passwords are compromised. It helps protect against credential theft, reduces the risk of data breaches, and ensures compliance with industry regulations. Additionally, Microsoft 365 offers flexible and user-friendly options for implementing MFA, such as Conditional Access policies and security defaults, making it adaptable to various organizational needs.
+
+### Implementation
+
+### Instructions
+- [Enable Azure MFA](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-azure-mfa)
+
 
 ### Policies
 ## 2. Are Legacy Authentication methods blocked?
